@@ -9,7 +9,7 @@ namespace ApiTests
     {
         public const string BaseUrl = "http://localhost:5000/api";
 
-        public static string? AuthenticateUser(string email, string password)
+        public static string AuthenticateUser(string email, string password)
         {
             var authClient = new RestClient(BaseUrl);
             var request = new RestRequest("user/login", Method.Post);
